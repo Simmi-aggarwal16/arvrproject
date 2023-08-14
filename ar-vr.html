@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CHANDRAYAN 3 ILLUSTRATION</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <!--asset management system-->
+      <a-assets>
+        <img id="sky" src="sky.jpg">
+        <a-asset-item id="moon-o" src="Moon_2K.obj"></a-asset-item>
+        <a-asset-item id="moon-m" src="Moon_2K.mtl"></a-asset-item>
+
+      </a-assets>
+
+      <!--sky-->
+      <a-sky src="#sky"></a-sky> 
+
+      <!--camera-->
+      <a-entity position="-3 0 50"> 
+        <a-camera></a-camera>
+      </a-entity>
+      
+      <!--moon base-->
+      <a-entity obj-model="obj: #moom-o; mtl: #moon-m"></a-entity>
+      
+    </a-scene>
+  </body>
+</html>
